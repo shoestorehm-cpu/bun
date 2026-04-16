@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Cairo', ui-sans-serif, system-ui, sans-serif;
+  
+  /* Premium Cafe Theme Colors */
+  --color-primary: #1E3932; /* Deep Starbucks Green */
+  --color-primary-light: #006241;
+  --color-accent: #D4AF37; /* Premium Gold */
+  --color-accent-hover: #b8972b;
+  --color-coffee-dark: #2c1e16; /* Espresso */
+  --color-coffee-medium: #4a3324;
+  --color-bg-base: #F4F0EB; /* Cream */
+  --color-bg-surface: #FFFFFF;
+  --color-text-main: #111111;
+  --color-text-muted: #6B6B6B;
+  --color-border: #EADBCE;
+  --color-success: #10B981;
+  --color-nav-active: #F0EDE6;
+  --color-table-head: #FAF8F5;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body, html {
+    background: white;
+  }
+}
