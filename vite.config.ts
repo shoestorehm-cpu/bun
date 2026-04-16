@@ -5,8 +5,11 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+  
+  // Set base dynamically based on environment or fallback to relative
+  // Relative './' works best for Github Pages if deployed at root or subpath without explicit configuration.
   return {
-    base: './', // CRITICAL: Ensures assets load relatively on GitHub Pages
+    base: './', 
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
